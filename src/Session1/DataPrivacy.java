@@ -164,16 +164,9 @@ public class DataPrivacy {
         Scanner scanner = new Scanner ( System.in );
         Person[] p = new Person[NUM_PEOPLE]; // Our environment would contain 3 people
         for ( int i = 0; i < NUM_PEOPLE; i++ ) {
-            System.out.println ( "Do you wish to enter your details?  (Enter True or False)" );
-            boolean isAnonymous = !scanner.nextBoolean ( );
-            if ( isAnonymous ) {
-                System.out.println ( "Do you like IceCream ? (Enter True or False)" );
-                p[i] = new Person ( scanner.nextBoolean() );
-            } else {
-                p[i] = getPerson ( scanner );
-            }
+                p[i] = getPerson (scanner );
         }
-
+        scanner.close ();
         for ( Person p1 : p ) {
             System.out.println ( p1 );
         }
@@ -182,20 +175,29 @@ public class DataPrivacy {
     /**
      * Method to initialize a person object
      * Collects name, age, anonymous and whether the person likes ice cream from the terminal
-     *
-     * @param scanner - Scanner class received from main method
+     * @param scanner
      * @return Person - A class that contains the details of the person
      */
     private static Person getPerson (Scanner scanner) {
+        System.out.println ( "Do you wish to enter your details?  (Enter True or False)" );
+        boolean isAnonymous = !scanner.nextBoolean ();
+        scanner.nextLine ();
+        if (isAnonymous){
+            System.out.println ( "Do you like Ice Cream? (Enter True or False)" );
+            boolean likesIceCream = scanner.nextBoolean();
+            scanner.nextLine ();
+            return new Person ( likesIceCream );
+        }
+
         System.out.println ( "Enter your name" );
         String name = scanner.nextLine();
 
         System.out.println ( "Enter your age" );
         int age = scanner.nextInt();
-
+        scanner.nextLine ();
         System.out.println ( "Do you like Ice Cream? (Enter True or False)" );
         boolean likesIceCream = scanner.nextBoolean();
-        scanner.close ();
+        scanner.nextLine ();
         return new Person ( name, age, likesIceCream );
     }
 }

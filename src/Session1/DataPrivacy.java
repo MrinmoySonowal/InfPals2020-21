@@ -1,3 +1,12 @@
+/*
+   27th January 2020 - InfPals session
+   Students would be asked to create this class after giving them the question and a few prompts
+   This class demonstrates the use of
+     - toString method
+     - the scanner class (it's shortfalls in particular)
+     -  Function overloading ( constructor overloading)
+     - Array of a class
+ */
 package Session1;
 
 import java.util.Scanner;
@@ -7,9 +16,7 @@ Class to indicate a person, contains name,age, likesIceCream and whether the per
  */
 class Person {
 
-    /**
-     * Name of the person
-     */
+    /** Name of the person */
     private String name;
 
     /**
@@ -155,9 +162,8 @@ class Person {
  * Main class
  */
 public class DataPrivacy {
-    /**
-     * Indicates the number of people who are filling their details
-     */
+
+     /** Indicates the number of people who are filling their details */
     private static int NUM_PEOPLE = 3;
 
     public static void main (String[] args) {
@@ -175,12 +181,13 @@ public class DataPrivacy {
     /**
      * Method to initialize a person object
      * Collects name, age, anonymous and whether the person likes ice cream from the terminal
-     * @param scanner
+     * @param scanner - Scanner class object recieved from main, this will help us get inputs from the user
      * @return Person - A class that contains the details of the person
      */
     private static Person getPerson (Scanner scanner) {
         System.out.println ( "Do you wish to enter your details?  (Enter True or False)" );
         boolean isAnonymous = !scanner.nextBoolean ();
+        // After scanning the boolean value from the terminal, we must proceed to the nextLine in order to get the next input
         scanner.nextLine ();
         if (isAnonymous){
             System.out.println ( "Do you like Ice Cream? (Enter True or False)" );
@@ -190,7 +197,7 @@ public class DataPrivacy {
         }
 
         System.out.println ( "Enter your name" );
-        String name = scanner.nextLine();
+        String name = scanner.nextLine(); // Here we do not have to go the nextLine again as our scanner already moves to the next line
 
         System.out.println ( "Enter your age" );
         int age = scanner.nextInt();

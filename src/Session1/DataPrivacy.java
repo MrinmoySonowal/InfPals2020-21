@@ -8,12 +8,8 @@
      - Array of a class
  */
 package Session1;
-
 import java.util.Scanner;
 
-/*
-Class to indicate a person, contains name,age, likesIceCream and whether the person is anonymous as fields
- */
 class Person {
 
     /** Name of the person */

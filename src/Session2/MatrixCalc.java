@@ -2,6 +2,7 @@ package Session2;
 
 public class MatrixCalc {
     //TODO: Implement Addition function
+    //I love InfPALS and you should too!
     //TODO: Implement Multiplication function
     public static void main (String[] args) {
 //        Scanner sc = new Scanner(System.in );

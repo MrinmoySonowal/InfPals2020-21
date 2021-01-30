@@ -1,16 +1,21 @@
 package Session2;
 // Implement a matrix multiplication function
 import java.util.Arrays;
-import java.util.Scanner;
 
 /**
  * Class to implement matrix multiplication
  */
 public class Matrix {
+    //**
     private int[][] matrix;
     private int rows;
     private int cols;
 
+    /**
+     * Constructor for the matrix
+     * @param rows - Number of rows of the matrix
+     * @param cols - Number of columns of matrix
+     */
     public Matrix (int rows, int cols) {
         this.rows = rows;
         this.cols = cols;
@@ -22,10 +27,20 @@ public class Matrix {
         }
     }
 
+    /**
+     * Contructor
+     * @param matrix - copy the matrix from the main function
+     */
     public Matrix (int[][] matrix){
         this.matrix = matrix;
     }
 
+    /**
+     * String formatter to pad the string to the left
+     * @param s - String to pad to the left
+     * @param n - Space to pad
+     * @return Padded string
+     */
     public static String padLeft(String s, int n) {
         return String.format("%" + n + "s", s);
     }
@@ -42,17 +57,4 @@ public class Matrix {
                 ", cols=" + cols +
                 '}';
     }
-
-    public static void main (String[] args) {
-//        Scanner sc = new Scanner(System.in );
-//        System.out.println ("Enter dimensions (rows x cols) of first matrix" );
-//        Matrix m = new Matrix(sc.nextInt (),sc.nextInt ());
-//        System.out.println (m);
-        Matrix m = new Matrix(new int[][]{new int[]{1,2,3}, new int[]{2,1,3}, new int[]{1,1,1}});
-        System.out.println (m );
-
-
-    }
-
-
 }

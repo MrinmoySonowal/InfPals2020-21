@@ -10,6 +10,9 @@
 package Session1;
 import java.util.Scanner;
 
+/**
+ * Class to represent a person
+ */
 class Person {
 
     /** Name of the person */
@@ -198,9 +201,11 @@ public class DataPrivacy {
         System.out.println ( "Enter your age" );
         int age = scanner.nextInt();
         scanner.nextLine ();
+
         System.out.println ( "Do you like Ice Cream? (Enter True or False)" );
         boolean likesIceCream = scanner.nextBoolean();
         scanner.nextLine ();
+
         return new Person ( name, age, likesIceCream );
     }
 }

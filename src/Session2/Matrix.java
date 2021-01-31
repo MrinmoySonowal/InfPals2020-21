@@ -27,12 +27,26 @@ public class Matrix {
         }
     }
 
+    public int getCols() {
+        return cols;
+    }
+
+    public int getRows() {
+        return rows;
+    }
+
+    public int[][] getMatrix() {
+        return matrix;
+    }
+
     /**
      * Contructor
      * @param matrix - copy the matrix from the main function
      */
     public Matrix (int[][] matrix){
         this.matrix = matrix;
+        this.rows = matrix.length;
+        this.cols = matrix[0].length;
     }
 
     /**

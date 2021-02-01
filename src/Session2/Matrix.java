@@ -6,11 +6,23 @@ import java.util.Arrays;
  * Class to implement matrix multiplication
  */
 public class Matrix {
-    //**
+    /**Matrix of dimensions rows*cols */
     private int[][] matrix;
+    /**Number of rows of the matrix*/
     private int rows;
+    /**Number of columns of the matrix*/
     private int cols;
 
+    /**
+     * Contructor of a matrix given another int[][] matrix
+     * @param matrix - copy the matrix from the main function
+     */
+    public Matrix (int[][] matrix){
+        this.matrix = matrix;
+        this.rows = matrix.length;
+        this.cols = matrix[0].length;
+    }
+    
     /**
      * Constructor for the matrix
      * @param rows - Number of rows of the matrix
@@ -27,27 +39,41 @@ public class Matrix {
         }
     }
 
+    /**
+     * Getter method for cols
+     * @return The number of columns of the matrix
+     */
     public int getCols() {
         return cols;
     }
 
+    /**
+     * Getter method for rows
+     * @return The number of rows of the matrix
+     */
     public int getRows() {
         return rows;
     }
 
+    /**
+     * Getter method for the matrix
+     * @return Returns the matrix of type int[][] and size (rows*cols)
+     */
     public int[][] getMatrix() {
         return matrix;
     }
 
     /**
-     * Contructor
-     * @param matrix - copy the matrix from the main function
+     * for given index (i,j) set element matrix[i][j] to the value (val)
+     * @param i - row index of the matrix
+     * @param j - column index of the matrix
+     * @param val - value to be set for matrix[i][j] cell
      */
-    public Matrix (int[][] matrix){
-        this.matrix = matrix;
-        this.rows = matrix.length;
-        this.cols = matrix[0].length;
+    public void setElement(int i, int j, int val){
+        this.matrix[i][j] = val;
     }
+
+
 
     /**
      * String formatter to pad the string to the left

@@ -22,7 +22,7 @@ public class Matrix {
         this.rows = matrix.length;
         this.cols = matrix[0].length;
     }
-    
+
     /**
      * Constructor for the matrix
      * @param rows - Number of rows of the matrix

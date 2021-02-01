@@ -15,10 +15,11 @@ public class ArabicStyleMatrix {
         Matrix mat = new Matrix(rows,cols);
         for(int i=0; i<rows;i++ ){
             for(int j=cols-1;j>=0;j--){
-                System.out.println ("Enter next element" );
+                System.out.println (String.format("Enter element for cell (%d, %d)" , i, j));
                 mat.setElement ( i,j,sc.nextInt() );
             }
         }
         System.out.println (mat);
+        sc.close ();
     }
 }

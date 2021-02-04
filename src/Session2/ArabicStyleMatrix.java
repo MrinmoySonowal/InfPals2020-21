@@ -12,6 +12,7 @@ public class ArabicStyleMatrix {
         int rows = sc.nextInt();
         System.out.println ("Enter the number of cols" );
         int cols = sc.nextInt();
+
         Matrix mat = new Matrix(rows,cols);
         for(int i=0; i<rows;i++ ){
             for(int j=cols-1;j>=0;j--){
@@ -19,6 +20,7 @@ public class ArabicStyleMatrix {
                 mat.setElement ( i,j,sc.nextInt() );
             }
         }
+
         System.out.println (mat);
         sc.close ();
     }

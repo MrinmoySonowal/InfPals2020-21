@@ -73,6 +73,7 @@ public class Matrix {
         this.matrix[i][j] = val;
     }
 
+    public int getElement(int i, int j){return matrix[i][j];}
 
 
     /**

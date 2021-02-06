@@ -1,8 +1,8 @@
-package Session3.UndergroundSystem;
+package Session5.UndergroundSystem;
 
 /**
  * Class to represent the average travel time between two stations
- * Average class instances are stored in the averages map in Session3.UndergroundSystem.java
+ * Average class instances are stored in the averages map in Session5.UndergroundSystem.java
  */
 public class Average {
     private int totalTime = 0;

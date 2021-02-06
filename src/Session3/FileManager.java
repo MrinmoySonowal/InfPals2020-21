@@ -3,8 +3,15 @@ package Session3;
 import java.io.*;
 import java.util.Scanner;
 
+/**
+ * Enables reading and writing of class instances from and into files, respectively
+ */
 public class FileManager {
-
+    /**
+     * Method to write object of a class into a file
+     * @param obj - Arbitrary object of any class, including array of classes
+     * @return - Returns the file path of type String
+     */
     public String writeObject(Object obj) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter filepath:");
@@ -15,7 +22,7 @@ public class FileManager {
             ObjectOutputStream outObject = new ObjectOutputStream(outFile);
             outObject.writeObject(obj);
             outObject.close();
-            System.out.println("Student: " + obj + " created succesfully, and saved to: " + filepath);
+            System.out.println("Student: " + obj + " created successfully, and saved to: " + filepath);
 
             return filepath;
         }
@@ -25,6 +32,11 @@ public class FileManager {
         }
     }
 
+    /**
+     * Reads object from a binary file
+     * @param filepath - A file path to the binary file
+     * @return - The object (Any class instance) in the file
+     */
     public Object readObject(String filepath) {
         try {
             FileInputStream inFile = new FileInputStream(filepath);

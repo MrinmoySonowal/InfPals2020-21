@@ -6,11 +6,11 @@ import java.util.Arrays;
  * Class to implement matrix multiplication
  */
 public class Matrix {
-    /**Matrix of dimensions rows*cols */
+    /**Matrix of dimensions (rows*cols) */
     private int[][] matrix;
-    /**Number of rows of the matrix*/
+    /**Number of rows of the matrix */
     private int rows;
-    /**Number of columns of the matrix*/
+    /**Number of columns of the matrix */
     private int cols;
 
     /**
@@ -85,6 +85,7 @@ public class Matrix {
     public static String padLeft(String s, int n) {
         return String.format("%" + n + "s", s);
     }
+
 
     @Override
     public String toString () {

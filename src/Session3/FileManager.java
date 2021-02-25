@@ -12,7 +12,7 @@ public class FileManager {
      * @param obj - Arbitrary object of any class, including array of classes
      * @return - Returns the file path of type String
      */
-    public String writeObject(Object obj) {
+    public String  writeObject (Object obj) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter filepath:");
         String filepath = sc.nextLine();
@@ -22,7 +22,8 @@ public class FileManager {
             ObjectOutputStream outObject = new ObjectOutputStream(outFile);
             outObject.writeObject(obj);
             outObject.close();
-            System.out.println("Student: " + obj + " created successfully, and saved to: " + filepath);
+            // Only use the following print statement, if object has an overridden toString() method
+            System.out.println("Object: " + obj + " created successfully, and saved to: " + filepath);
 
             return filepath;
         }

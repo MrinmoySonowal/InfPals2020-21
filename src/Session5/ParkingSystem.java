@@ -6,7 +6,7 @@ public class ParkingSystem {
     public ParkingSystem(int big, int medium, int small) {
         spaces = new int[]{big, medium, small};
     }
-    // add car function -- delete afterwards
+
     public boolean addCar(int carType) {
         if (spaces[carType-1]>0){
             spaces[carType-1]-=1;
